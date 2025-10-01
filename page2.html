@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Add New Record</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="app-header shadow-sm mb-4">
+      <div class="container d-flex align-items-center justify-content-center">
+        <h2 class="mb-0">Add New Client</h2>
+      </div>
+    </header>
+
+    <!-- Form Container -->
+    <main class="container">
+      <div class="card shadow-sm border-0 rounded-4 p-4">
+        <form>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="fullName" class="form-label">Full Name</label>
+              <input
+                type="text"
+                id="fullName"
+                class="form-control"
+                placeholder="Enter full name"
+                required
+              />
+            </div>
+
+        
+
+            <!-- Same row: Type of Work + Words -->
+            <div class="col-md-6">
+              <label for="educationLevel" class="form-label">Level of Education</label>
+              <select id="educationLevel" class="form-select">
+                <option value="">Select Type of work</option>
+                <option>Diploma</option>
+                <option>Bachelor's Degree</option>
+                <option>Master's Degree</option>
+                <option>Doctorate (PhD)</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <label for="numberOfPages" class="form-label">Number of Pages</label>
+              <input
+                type="number"
+                id="numberOfPages"
+                class="form-control"
+                placeholder="Number of pages"
+              />
+            </div>
+
+            <div class="col-md-4">
+              <label for="price" class="form-label">Price (£)</label>
+              <input
+                type="number"
+                id="price"
+                class="form-control"
+                placeholder="Price in GBP"
+              />
+            </div>
+
+            <div class="col-md-4">
+              <label for="Cost" class="form-label">Cost (£)</label>
+              <input
+                type="number"
+                id="Cost"
+                class="form-control"
+                placeholder="Cost in GBP"
+              />
+            </div>
+
+            <div class="col-md-4">
+              <label for="netProfit" class="form-label">Net Profit (£)</label>
+              <input
+                type="number"
+                id="netProfit"
+                class="form-control"
+                placeholder="Profit in GBP"
+              />
+            </div>
+
+            <div class="col-md-6">
+              <label for="receivedDate" class="form-label">Received Date</label>
+              <input type="date" id="receivedDate" class="form-control" />
+            </div>
+
+            <div class="col-md-6">
+              <label for="submissionDate" class="form-label"
+                >Submission Date</label
+              >
+              <input type="date" id="submissionDate" class="form-control" />
+            </div>
+
+            <div class="col-12 text-end mt-4">
+              <button id ="addDataButton" type="submit" class="btn btn-success px-4">Save</button>
+              <a href="index.html" class="btn btn-secondary px-4">Cancel</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

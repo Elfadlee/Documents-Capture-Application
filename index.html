@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet"/>
+    <title>Right Way Project</title>
+
+   
+    <link rel="stylesheet" href="bootstrap.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="app-header shadow-sm">
+      <div class="container-fluid d-flex align-items-center justify-content-center">
+        <h1 class="h4 mb-0 d-flex align-items-center gap-2">
+          Documents Capture Application 
+        </h1>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="container-fluid py-3" >
+      <div class="row g-3" >
+        <!-- Table column -->
+        <section class="col-12 col-lg-9">
+          <div class="card border-0 rounded-4 shadow-sm h-100">
+            <div class="card-header bg-white rounded-top-4 py-3 d-flex align-items-center justify-content-between">
+              <div class="input-group input-group-sm w-auto">
+                <span class="input-group-text bg-white border-end-0">
+                  <span class="material-icons-outlined">search</span>
+                </span>
+                <input id="searchInput" type="search" class="form-control border-start-0" placeholder="Search name, type..." />
+              </div>
+              <button onclick="refreshFun()" class="btn btn-outline-secondary btn-sm d-flex align-items-center gap-1">
+                <span class="material-icons-outlined">refresh</span> Refresh
+              </button>
+            </div>
+
+            <div class="card-body p-0 ">
+              <div class="table-responsive tableFixHead">
+                <table class="table table-hover table-striped align-middle mb-0" >
+                  <thead class="table stickyhead" style="width: 100% !important;" >
+                    <tr  style="width: auto;">
+                      <th scope="col">Num</th>
+                      <th scope="col">Full Name</th>
+                      <th scope="col">Number of Pages</th>
+                      <th scope="col">Level Of Education</th>
+                      <th scope="col">Price (£)</th>
+                      <th scope="col">Cost (£)</th>
+                      <th scope="col">Received</th>
+                      <th scope="col">Submission</th>
+                      <th scope="col">Net Profit (£)</th>
+                    </tr>
+                  </thead>
+                  <tbody id="ordersBody">
+                    <tr>
+                      <th scope="row">1</th>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td class="text-success fw-semibold">300</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td class="text-success fw-semibold">130</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td class="text-success fw-semibold">200</td>
+                    </tr>
+                  </tbody>
+                  <tfoot class="table-light">
+                    <tr>
+                      <th colspan="9" class="text-end">Total Profit</th>
+                      <th id="totalProfit" class="text-success fw-bold">630</th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Actions column -->
+        <aside class="col-12 col-lg-3">
+          <div class="card border-0 rounded-4 shadow-sm h-50">
+            <div class="card-header bg-white rounded-top-4 py-3 d-flex align-items-center gap-2">
+              <span class="material-icons-outlined">handyman</span>
+              <strong>Actions</strong>
+            </div>
+            <div class="card-body d-grid gap-1">
+              <button onclick="window.location.href='page2.html'" class="btn btn-success btn-xxs d-flex align-items-center justify-content-center gap-1">
+                <span class="material-icons-outlined">add</span>
+                Add
+            </button>
+            <button id="editBtn" type="button" class="btn btn-primary btn-xxs d-flex align-items-center justify-content-center gap-1">
+
+                <span class="material-icons-outlined">edit</span>
+                Edit
+            </button>
+            <button id="deleteBtn" class="btn btn-danger btn-xxs d-flex align-items-center justify-content-center gap-1">
+                <span class="material-icons-outlined">delete</span>
+                Delete
+            </button>
+            <button onclick="window.location.href='page3.html'" class="btn btn-secondary btn-xxs d-flex align-items-center justify-content-center gap-1">
+                <span class="material-icons-outlined">analytics</span>
+                Reports
+            </button>
+
+              
+
+              <hr class="my-2">
+
+            
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+ 
+
+    <!-- Local Bootstrap bundle (your project already includes it) -->
+    <script src="bootstrap.bundle.min.js"></script>
+     <script src="script.js"></script>
+  </body>
+</html>
