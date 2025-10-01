@@ -180,22 +180,22 @@ function loadDocuments(searchTerm = '') {
 }
 
 // Edit document
-function editDocument(id) {
+window.editDocument = function(id) {
     const documents = StorageManager.getDocuments();
-    const document = documents.find(doc => doc.id === id);
+    const doc = documents.find(d => d.id === id);
     
-    if (!document) {
+    if (!doc) {
         showAlert('Document not found!', 'danger');
         return;
     }
     
     // Populate form with document data
-    document.getElementById('documentId').value = document.id;
-    document.getElementById('clientName').value = document.clientName;
-    document.getElementById('documentType').value = document.documentType;
-    document.getElementById('numberOfPages').value = document.numberOfPages;
-    document.getElementById('costPerPage').value = document.costPerPage;
-    document.getElementById('revenue').value = document.revenue;
+    document.getElementById('documentId').value = doc.id;
+    document.getElementById('clientName').value = doc.clientName;
+    document.getElementById('documentType').value = doc.documentType;
+    document.getElementById('numberOfPages').value = doc.numberOfPages;
+    document.getElementById('costPerPage').value = doc.costPerPage;
+    document.getElementById('revenue').value = doc.revenue;
     
     // Calculate totals
     calculateTotals();
@@ -210,7 +210,7 @@ function editDocument(id) {
 }
 
 // Delete document
-function deleteDocument(id) {
+window.deleteDocument = function(id) {
     if (confirm('Are you sure you want to delete this document?')) {
         StorageManager.deleteDocument(id);
         showAlert('Document deleted successfully!', 'info');
